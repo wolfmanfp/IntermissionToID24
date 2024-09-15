@@ -2,7 +2,7 @@ package hu.wolfman.intermissiontoid24;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.StdDateFormat;
-import hu.wolfman.intermissiontoid24.format.json.JsonLump;
+import hu.wolfman.intermissiontoid24.format.json.InterlevelLump;
 import hu.wolfman.intermissiontoid24.format.json.Metadata;
 import hu.wolfman.intermissiontoid24.format.zdoom.Intermission;
 import hu.wolfman.intermissiontoid24.format.zdoom.Pointer;
@@ -30,7 +30,7 @@ public class Main {
         ));
 
         Metadata metadata = new Metadata("WolfmanFP", new Date(), "");
-        JsonLump jsonLump = new JsonLump(metadata, new Converter().convert(intermission));
+        InterlevelLump jsonLump = new InterlevelLump(metadata, new Converter().convert(intermission));
 
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setDateFormat(new StdDateFormat().withColonInTimeZone(true));

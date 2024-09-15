@@ -10,8 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Converter {
-    public Data convert(Intermission intermission) {
-        Splat splat = intermission.getSplat();
+    public InterlevelData convert(Intermission intermission) {
         String splat = intermission.getSplat();
         Pointer pointer = intermission.getPointer();
         List<Spot> spots = intermission.getSpots();
@@ -28,7 +27,7 @@ public class Converter {
                 createPointerLayer(pointer, spots)
         );
 
-        return new Data(music, backgroundImage, layers);
+        return new InterlevelData(music, backgroundImage, layers);
     }
 
     private Layer createSplatLayer(String splat, List<Spot> spots) {
