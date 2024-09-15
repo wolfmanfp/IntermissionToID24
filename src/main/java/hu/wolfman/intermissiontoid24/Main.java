@@ -4,7 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.StdDateFormat;
 import hu.wolfman.intermissiontoid24.format.json.JsonLump;
 import hu.wolfman.intermissiontoid24.format.json.Metadata;
-import hu.wolfman.intermissiontoid24.format.zdoom.*;
+import hu.wolfman.intermissiontoid24.format.zdoom.Intermission;
+import hu.wolfman.intermissiontoid24.format.zdoom.Pointer;
+import hu.wolfman.intermissiontoid24.format.zdoom.Spot;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,8 +17,8 @@ public class Main {
     public static void main(final String[] args) {
         // TODO remove test data
         Intermission intermission = new Intermission();
-        intermission.setBackground(new Background("WI2MAP1"));
-        intermission.setSplat(new Splat("wisplat"));
+        intermission.setBackground("WI2MAP1");
+        intermission.setSplat("wisplat");
         intermission.setPointer(new Pointer("wiurh0", "wiurh1"));
         intermission.setSpots(Arrays.asList(
             new Spot("MAP01", 80, 170),

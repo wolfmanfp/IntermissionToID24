@@ -5,9 +5,9 @@ import java.util.Set;
 
 public class Intermission {
     private boolean noAutoStartMap = true;
-    private Background background;
+    private String background;
     private boolean tileBackground;
-    private Splat splat;
+    private String splat;
     private Pointer pointer;
     private List<Spot> spots;
     private Set<Animation> animations;
@@ -22,11 +22,11 @@ public class Intermission {
         this.noAutoStartMap = noAutoStartMap;
     }
 
-    public Background getBackground() {
+    public String getBackground() {
         return background;
     }
 
-    public void setBackground(Background background) {
+    public void setBackground(String background) {
         this.background = background;
     }
 
@@ -38,11 +38,11 @@ public class Intermission {
         this.tileBackground = tileBackground;
     }
 
-    public Splat getSplat() {
+    public String getSplat() {
         return splat;
     }
 
-    public void setSplat(Splat splat) {
+    public void setSplat(String splat) {
         this.splat = splat;
     }
 
